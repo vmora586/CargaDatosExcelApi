@@ -1,15 +1,17 @@
 package co.com.konecta.appCargaDatosCobranzasSufi.repository;
 
-import java.io.Serializable;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
 import co.com.konecta.appCargaDatosCobranzasSufi.entity.User;
 
-@Repository("userRepository")
-public interface UserRepository extends JpaRepository<User, Serializable>{
+/**
+ * usually this class extends from jpa repository, but in this
+ * case we are working with jdbc
+ * @author victorm
+ *
+ */
 
-	public abstract User findByUsername(String username);
+
+public interface UserRepository {
+
+	public  User authentiatedUser(String username, String password);
 
 }

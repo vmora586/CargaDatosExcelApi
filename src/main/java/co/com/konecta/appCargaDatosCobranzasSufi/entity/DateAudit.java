@@ -1,4 +1,4 @@
-package co.com.konecta.appCargaDatosCobranzasSufi.model;
+package co.com.konecta.appCargaDatosCobranzasSufi.entity;
 
 public class DateAudit {
 	private String createdAt;
